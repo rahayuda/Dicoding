@@ -20,7 +20,7 @@ var articles = [
 ];
 
 var contentSection = document.getElementById("content");
-var MAX_CONTENT_LENGTH = 500;
+var MAX_CONTENT_LENGTH = 400;
 
 articles.forEach(function(articleData) {
   var article = document.createElement("article");
