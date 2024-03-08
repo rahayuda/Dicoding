@@ -52,7 +52,7 @@ footer {
 }
 
 nav {
-  order: 1; /* Menggeser elemen ini ke kanan */
+  order: 1; 
 }
 
 /* Navigation */
@@ -87,8 +87,7 @@ nav li:hover {
 
 #course-menu {
   display: none;
-  position: absolute;
-  background-color: #fff; /* Warna background dropdown */
+  position: absolute; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
