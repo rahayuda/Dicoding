@@ -46,7 +46,6 @@ articles.forEach(function(articleData) {
   textDiv.classList.add("txt-artc");
   var text = document.createElement("p");
 
-  // Memotong konten jika melebihi batasan jumlah karakter
   if (articleData.content.length > MAX_CONTENT_LENGTH) {
     text.textContent = articleData.content.substring(0, MAX_CONTENT_LENGTH) + '...';
   } else {
