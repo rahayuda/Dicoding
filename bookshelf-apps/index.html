@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Bookshelf Apps</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <header>
+    <div class="head">Bookshelf Apps</div>
+  </header>
+  <main>
+
+    <div class="operation">
+      <div class="search_section">
+        <h3><i class="fas fa-th-list"></i>&nbsp;Cari Buku</h3>
+        <form id="searchBook" class="card_content">
+          <table>
+            <tr>
+              <th><label for="searchBookTitle">Judul</label></th>
+              <td>
+                <input id="searchBookTitle" type="text">
+              </td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <button id="searchSubmit" type="submit"><i class="fas fa-search"></i>&nbsp;Cari</button>
+              </td>
+            </tr>
+          </table>   
+        </form>
+      </div>
+
+      <div class="input_section">
+        <h3><i class="fas fa-th-list"></i>&nbsp;Masukkan Buku Baru</h3>
+        <form id="inputBook" class="card_content">
+          <table>
+            <tr>
+              <th><label for="inputBookTitle">Judul</label></th>
+              <td><input id="inputBookTitle" type="text" required></td>
+            </tr>
+            <tr>
+              <th><label for="inputBookAuthor">Penulis</label></th>
+              <td><input id="inputBookAuthor" type="text" required></td>
+            </tr>
+            <tr>
+              <th><label for="inputBookYear">Tahun</label></th>
+              <td><input id="inputBookYear" type="number" required></td>
+            </tr>
+            <tr>
+              <th><label for="inputBookIsComplete">Selesai Dibaca</label></th>
+              <td><input id="inputBookIsComplete" type="checkbox"></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td><button id="bookSubmit" type="submit"><i class="fas fa-paper-plane"></i>&nbsp;Masukkan Buku</button></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="book">
+
+      <div class="book_shelf">
+        <h3><i class="fas fa-th-list"></i>&nbsp;Belum Selesai Dibaca</h3>
+        <div id="incompleteBookshelfList" class="card_content book_list"></div>
+      </div>
+
+      <div class="book_shelf">
+        <h3><i class="fas fa-th-list"></i>&nbsp;Selesai Dibaca</h3>
+        <div id="completeBookshelfList" class="card_content book_list"></div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&#169; 2024</p>
+  </footer>
+  
+  <script src="main.js"></script>
+
+</body>
+</html>
