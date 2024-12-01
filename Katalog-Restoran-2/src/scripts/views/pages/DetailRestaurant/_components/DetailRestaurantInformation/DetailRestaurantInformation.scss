@@ -1,0 +1,244 @@
+.detail {
+  display: block;
+  padding: 0 20px;
+
+  &__overview {
+    text-align: center;
+    &-header {
+      &-info {
+        h1 {
+          color: #424040;
+          font-size: 30px;
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &-body {
+      h2 {
+        color: #424040;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+
+      &-description {
+        p {
+          width: 100%;
+        }
+      }
+
+      &-categories {
+        ul {
+          margin: auto;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          list-style-type: none;
+
+          li {
+            padding: 10px 20px;
+            border-radius: 15px;
+            color: white;
+            background-color: #424040;
+          }
+        }
+      }
+
+      &-menus {
+        &__container {
+          display: flex;
+          flex-direction: column;
+
+          &-item {
+            margin-bottom: 20px;
+
+            ul {
+              list-style-type: none;
+
+              li {
+                margin: 20px auto;
+                padding: 10px 20px;
+                background-color: #424040;
+                width: 100%;
+                color: white;
+
+                &:hover {
+                  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &-reviews {
+        padding: 1rem;
+        &__container {
+          text-align: left;
+          display: grid;
+
+          article {
+            background-color: #fafafa;
+            border: dashed 1px black;
+            border-radius: 1rem;
+            margin-top: 10px;
+            padding: 20px;
+            width: 100%;
+            overflow: hidden;
+
+            &:hover {
+              box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            h3 {
+              color: black;
+              font-size: 16px;
+            }
+
+            p {
+              width: 100%;
+            }
+
+            date {
+              font-size: 14px;
+              margin-bottom: 15px;
+              color: #424040;
+              opacity: 0.4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.detail__overview-body-reviews__form {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  &-item {
+    margin-bottom: 15px;
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      height: 50px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border-radius: 12px;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+      border: none;
+
+    }
+
+    textarea {
+      width: 100%;
+      height: 200px;
+    }
+  }
+
+  button {
+    background-color: black;
+    color: white;
+    padding: 15px 3px;
+    border: none;
+    width: 100px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 15px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.detail__overview {
+  @media screen and (min-width: 320px) {
+    &-body {
+      &-menus__container {
+        &-item {
+          ul {
+            li {
+              width: 270px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 400px) {
+    &-body {
+      &-reviews__container {
+        article {
+          width: 350px;
+          margin: 0 auto 20px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 760px) {
+    &-body {
+      &-menus__container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 30px;
+      }
+
+      &-reviews__container {
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        gap: 10px;
+
+        article {
+          margin-bottom: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    &-header {
+      img {
+        max-width: 800px;
+      }
+    }
+
+    &-body {
+      &-description {
+        max-width: 800px;
+        margin: auto;
+      }
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    &-body {
+      &-reviews__container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &-body {
+      &-reviews__container, &-menus, &-reviews__form {
+        margin: auto;
+        max-width: 1100px;
+      }
+    }
+  }
+}

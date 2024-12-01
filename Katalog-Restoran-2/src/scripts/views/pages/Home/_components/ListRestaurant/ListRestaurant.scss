@@ -1,0 +1,19 @@
+.list_restaurant {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 1280px;
+
+  &__header {
+    margin-bottom: 2rem;
+  }
+
+  &__main-title {
+    font-size: 1.8rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+}
