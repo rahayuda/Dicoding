@@ -1,0 +1,17 @@
+.skip-to-content {
+  width: 100%;
+  position: absolute;
+  top: -100px;
+  display: block;
+  text-align: center;
+  background-color: #EADBC8;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  outline: none;
+}
+
+.skip-to-content:focus {
+  position: relative;
+  top: 0;
+}
